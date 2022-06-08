@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome8",
+    "definitions": {
+        "Welcome8": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "users": {
+                    "$ref": "#/definitions/Users"
+                }
+            },
+            "required": [
+                "users"
+            ],
+            "title": "Welcome8"
+        },
+        "Users": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "skillmap": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Skillmap"
+                    }
+                }
+            },
+            "required": [
+                "firstName",
+                "id",
+                "lastName",
+                "skillmap"
+            ],
+            "title": "Users"
+        },
+        "Skillmap": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "skill": {
+                    "$ref": "#/definitions/Skill"
+                }
+            },
+            "required": [
+                "id",
+                "skill"
+            ],
+            "title": "Skillmap"
+        },
+        "Skill": {
+            "type": "string",
+            "enum": [
+                "JAVA002"
+            ],
+            "title": "Skill"
+        }
+    }
+}

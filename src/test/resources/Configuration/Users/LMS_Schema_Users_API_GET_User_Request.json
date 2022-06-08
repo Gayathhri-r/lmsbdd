@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome4",
+    "definitions": {
+        "Welcome4": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "user_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "phone_number": {
+                    "type": "integer"
+                },
+                "location": {
+                    "type": "string"
+                },
+                "time_zone": {
+                    "type": "string"
+                },
+                "linkedin_url": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "linkedin_url",
+                "location",
+                "name",
+                "phone_number",
+                "time_zone",
+                "user_id"
+            ],
+            "title": "Welcome4"
+        }
+    }
+}
